@@ -63,12 +63,12 @@ int main(void)
         int check2=backup/(long) pow(10,14);
         if ((backup/(long) pow(10,15) ==4) || backup/(long) pow(10,13) ==4)
         {
-            printf("VISA CARD\n");
+            printf("VISA\n");
             return 1;
         }
         else if (check==34 || check==37)
         {
-            printf("AMEX CARD\n");
+            printf("AMEX\n");
             return 1;
         }
         else if(check2==51 || check2==52 ||check2==53 || check2==54 ||check2==55)
@@ -78,13 +78,13 @@ int main(void)
         }
         else
         {
-            printf("INVALID 2\n");
+            printf("INVALID\n");
             return 1;
         }
     }
     else 
     {
-        printf("INVALID 1\n");
+        printf("INVALID\n");
     }      
     
 
