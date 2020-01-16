@@ -58,7 +58,7 @@ int main(void)
     
     int Final_factor= prod_digit + sum_odd;
         
-    printf("The sum is %d\n", Final_factor);
+    //printf("The sum is %d\n", Final_factor);
     
     if(Final_factor%10 == 0)//&& (store_count==13 || store_count==15 ||store_count==16))
     {
