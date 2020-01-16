@@ -17,7 +17,7 @@ int main(void)
     if (store_count != 13 && store_count != 15 &&store_count != 16)
     {
         printf("INVALID\n");
-        return 1;
+        return 0;
     }
     
     else
@@ -70,22 +70,22 @@ int main(void)
         if (( Visa_check1==4) || Visa_check2 ==4)
         {
             printf("VISA\n");
-            return 1;
+            return 0;
         }
         else if (Amex_check == 34 || Amex_check == 37)
         {
             printf("AMEX\n");
-            return 1;
+            return 0;
         }
         else if(MasterCard_check==51 || MasterCard_check==52 ||MasterCard_check==53 || MasterCard_check==54 ||MasterCard_check==55)
         {
             printf("MASTERCARD\n");
-            return 1;
+            return 0;
         }
         else
         {
             printf("INVALID\n");
-            return 1;
+            return 0;
         }
     }
     else 
