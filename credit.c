@@ -14,7 +14,8 @@ int main(void)
     long backup= cc_num;
     
     int store_count = total_digit(cc_num);
-    if (store_count != 13 || store_count != 15 ||store_count != 16)
+    //printf("%d is the count",store_count);
+    if (store_count != 13 && store_count != 15 &&store_count != 16)
     {
         printf("INVALID\n");
         return 1;
