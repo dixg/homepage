@@ -7,7 +7,6 @@ int total_digit(long num);
 int main(void)
 { 
     int num,prod_even,sum,i,j,sum_odd=0,prod_digit=0,prod_digit2=0;
-    
     long cc_num = get_long("Number:");
     //printf("Number: %ld\n", cc_num);
     
@@ -15,7 +14,7 @@ int main(void)
     long backup= cc_num;
     
     int store_count = total_digit(cc_num);
-    printf("Total digits: %i\n", store_count);
+//     printf("Total digits: %i\n", store_count);
     
     for ( i = 1; i<=store_count; i++)
     {
@@ -52,44 +51,41 @@ int main(void)
         
     }
    
-    printf("prod_digit: %d\n",prod_digit);
-    printf("sum_odd:%d\n", sum_odd);
+//     printf("prod_digit: %d\n",prod_digit);
+//     printf("sum_odd:%d\n", sum_odd);
     
     int Final_factor= prod_digit + sum_odd;
-    printf("The deciding numberis %d\n", Final_factor);
+//     printf("The deciding numberis %d\n", Final_factor);
     
-    if((Final_factor%10 == 0)&& (store_count==13 || store_count==15 ||store_count==16))
+    if(Final_factor%10 == 0)//&& (store_count==13 || store_count==15 ||store_count==16))
     {
-        if (store_count >= 13 && store_count <= 16)
-    {
-        printf("VISA\n");
+        int check=backup/(long) pow(10,14);
+        int check2=backup/(long) pow(10,15);
+        if ((backup/(long) pow(10,15) ==4) || backup/(long) pow(10,13) ==4)
+        {
+            printf("VISA CARD\n");
+        }
+        else if (check==34 || check==37)
+        {
+            printf("AMEX CARD\n");
+        }
+        else if(check2==51 || check2==52 ||check2==53 || check2==54 ||check2==55)
+        {
+            printf("MASTERCARD\n");
+        }
+        else
+        {
+            printf("INVALID\n");
+        }
     }
-    else if (first_two_digits >= 51 && store_count <= 55 && store_count == 16)
-    {
-        printf("MASTERCARD\n");
-    }
-    else if ((first_two_digits == 34 || store_count == 37) && store_count == 15)
-    {
-        printf("AMEX\n");
-    }
-    else
+    else 
     {
         printf("INVALID\n");
-    }
-}
-         
-        
-        
-        
-    }
-    else
-    {
-     printf("This is not ligit\n");
-    }
-}
-
+    }      
     
 
+    
+}
 int total_digit(long num)
 {     
     int count=0;
