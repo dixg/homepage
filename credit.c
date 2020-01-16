@@ -59,28 +59,32 @@ int main(void)
     
     if(Final_factor%10 == 0)//&& (store_count==13 || store_count==15 ||store_count==16))
     {
-        int check=backup/(long) pow(10,14);
-        int check2=backup/(long) pow(10,15);
+        int check=backup/(long) pow(10,13);
+        int check2=backup/(long) pow(10,14);
         if ((backup/(long) pow(10,15) ==4) || backup/(long) pow(10,13) ==4)
         {
             printf("VISA CARD\n");
+            return 1;
         }
         else if (check==34 || check==37)
         {
             printf("AMEX CARD\n");
+            return 1;
         }
         else if(check2==51 || check2==52 ||check2==53 || check2==54 ||check2==55)
         {
             printf("MASTERCARD\n");
+            return 1;
         }
         else
         {
-            printf("INVALID\n");
+            printf("INVALID 2\n");
+            return 1;
         }
     }
     else 
     {
-        printf("INVALID\n");
+        printf("INVALID 1\n");
     }      
     
 
