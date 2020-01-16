@@ -19,8 +19,9 @@ int main(void)
         printf("INVALID\n");
         return 1;
     }
-//     printf("Total digits: %i\n", store_count);
     
+//     printf("Total digits: %i\n", store_count);
+    else{
     for ( i = 1; i<=store_count; i++)
     {
          num = cc_num % 10; 
@@ -91,7 +92,7 @@ int main(void)
     {
         printf("INVALID\n");
     }      
-    
+    }
 
     
 }
